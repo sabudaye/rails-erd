@@ -147,7 +147,7 @@ module RailsERD
     end
 
     def check_habtm_model(model)
-      model.name.start_with?("HABTM_")
+      model.name.nil? ? false : model.name.start_with?("HABTM_")
     end
   end
 end
